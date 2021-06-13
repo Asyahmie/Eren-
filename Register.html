@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script language="javascript">
+		function validate_form()
+			{
+				valid=true;
+    
+				if (document.myform.contact_name.value=="")
+    			{
+					alert("Please fill in your name");
+					document.myform.contact_name.focus();
+					valid=false;
+				}
+				
+				
+				if ( document.myform.age.selectedIndex==0)
+				{
+    				alert ("Please select your age");
+               		valid=false;
+    	 		}
+				
+				if ( document.myform.employment.selectedIndex==0)
+				{
+    				alert ("Please select your employment");
+               		valid=false;
+    	 		}
+				
+    			return valid;
+				}
+			
+			
+
+		</script>
+		<meta name="viewport" content="width=device-width, initial-scale-1">
+		<style>
+		
+		body { font-family: Arial,Helvetica, sans-serif; }
+		.navbar 
+		{
+			overflow: hidden;
+			background-color: #09F9D0;
+		
+		}
+		
+		.navbar a
+		{
+			float: right;
+			font-size: 16px;
+			color:black;
+			text-allign: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		
+		}
+		
+		.dropdown
+		{
+			float: left;
+			overflow: hidden;
+		}
+		
+	
+		
+		.navbar a:hover, .dropdown:hover .dropbtn
+		{
+			background-color: red;
+		
+		}
+		
+		.dropdown-content { background-color: #ddd; }
+		
+		.dropdown: hover .dropdown-content { display: block;}
+		
+			{box-sizing: border-box; }
+			body { font-family: Verdana, sans-serif; }
+			.mySlides {display: none;}
+			img {vertical-align: middle; }
+			
+			/* Slide shoe container */
+			.slideshow-container
+			{
+				max-width: 10000px;
+				position: relative;
+				margin: auto;
+			}
+			
+			/*Caption text */
+			.text 
+			{
+				color: #f2f2f2;
+				font-size: 15px;
+				padding: 8px 12px;
+				position: absolute;
+				bottom: 8px;
+				width: 100%;
+				text-align: center;
+			}
+			
+			
+	</style>
+		
+	</head>
+	
+		
+ 
+   <body style="background-color:purple;">
+   
+
+		<div class="navbar">
+		<a href="index.html"> Home </a>
+		<a href="Register.html"> Sign up </a>
+		<a href="About.html"> About </a>
+		<a href="Contact.html"> Contact </a>
+		
+			
+			
+		</div>
+		
+	</body>	
+	<head>
+		<title> SIGN UP </title>
+	</head>
+	
+	<body>
+		
+
+
+
+	
+	
+
+<hr />
+
+
+
+
+  
+  <p> Need a financial consultant?? register now. </p>
+  <form name="myform" method="post" action="" onSubmit="return validate_form();">
+    <h2>SIGN UP HERE</h2>
+	 
+ 
+   <p>Name:<br>
+	 <input type="text" name="contact_name"></p>
+   
+    <p>
+      <label for="age">Age:</label>
+      <br />
+      <select name="age" id="age">
+        <option value="">Please enter your age </option>
+        <option value="">18 to 28</option>
+        <option value="2">29 to 38</option>
+        <option value="3">39 to 48</option>
+        <option value="4">49 to 58</option>
+        <option value="5">59 to 70</option>
+		
+      </select>
+    </p>
+	  <p>
+      <label for="employment">Employment:</label>
+      <br />
+      <select name="employment">
+        <option value="">Please enter your employment</option>
+        <option value="1">Unemployed</option>
+        <option value="2">Employee</option>
+        <option value="3">Company's owner</option>
+        <option value="4">Student</option>
+		 
+      </select>
+    </p>
+    <p>
+      <label> Gender: </label>
+      <br />
+		<input type="radio" name="gender" id="male" value="male" required> Female
+      
+      
+      <br/>
+		<input type="radio" name="gender" id="female" value="female" required> Male
+      
+      
+       <br/>
+    </p>
+	  
+	  <p>
+      <label> Status: </label>
+      <br />
+		<input type="radio" class="radio" name="status" id="single" value="single" required> Divorced
+     
+      
+      <br/>
+		<input type="radio" class="radio" name="status" id="married" value="married"> Married
+   
+      
+       <br/>
+		 
+		<input type="radio" class="radio" name="status" id="divorce" value="divorce"> Single
+      
+    </p>
+    <p>
+      <label> Your monthly spend: </label>
+      <br />
+	  <input type="checkbox" class="checkbox" name="1" id="1" value="1" />
+      <label for="1"> Entertainment </label>
+     
+      <br/>
+		<input type="checkbox" class="checkbox" name="2" id="2" value="2" />
+      <label for="2"> Groceries </label><br>
+
+	  <input type="checkbox" class="checkbox" name="3" id="3" value="3" />
+      <label for="3"> Others </label>
+      
+      <br/>
+    </p>
+	  
+    
+  <br>
+
+    <p>
+      <input class="button" type="reset" value="Clear" />
+      <input class="button" type="submit" value="Submit" />
+    </p>
+  </form>
+
+
+<hr />
+
+
+
+
+	</body>
+</html>
